@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoOrdersActivity">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/scroll"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/container_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="31dp"
+                    android:backgroundTint="@color/Clear"
+                    android:contentDescription="@string/button_back"
+                    android:src="@drawable/arrow_back" />
+
+                <TextView
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="65dp"
+                    android:gravity="center"
+                    android:text="Информация о заказе"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="21dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containear_name_auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_head"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:gravity="center"
+                    android:text="@string/name_car"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"></TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container_infoOrders"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/containear_name_auto"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_border_info_orders"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Осмотр двигателя и замена при необходимости"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_info_order1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+
+                        android:background="@drawable/round_border_info_orders"
+
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck"></Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Замена задних фар"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_info_order"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:background="@drawable/round_border_info_orders"
+
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck"></Spinner>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Осмотр коробки передач"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner_info_order2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+
+                        android:background="@drawable/round_border_info_orders"
+
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck"></Spinner>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/container_infoOrders_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/container_infoOrders"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_border_info_orders"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Запчасти"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Введите расходники"
+                        android:inputType="text"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="14sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:contentDescription="@string/inputText"
+
+                        android:inputType="number"
+
+                        android:textAlignment="center"
+
+                        tools:ignore="TouchTargetSizeCheck,EditableContentDescCheck"></EditText>
+
+                    <Spinner
+                        android:id="@+id/spinner_units"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.5"
+
+
+                        android:background="@drawable/round_border_info_orders"
+
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck"></Spinner>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.5"
+                        android:backgroundTint="@color/Clear"
+                        android:contentDescription="@string/delete"
+                        android:src="@drawable/delete"
+                        tools:ignore="TouchTargetSizeCheck"></ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Введите расходники"
+                        android:inputType="text"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="14sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:contentDescription="@string/inputText"
+
+                        android:inputType="number"
+
+                        android:textAlignment="center"
+
+                        tools:ignore="TouchTargetSizeCheck,EditableContentDescCheck"></EditText>
+
+                    <Spinner
+                        android:id="@+id/spinner_units1"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.5"
+
+
+                        android:background="@drawable/round_border_info_orders"
+
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck"></Spinner>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.5"
+                        android:backgroundTint="@color/Clear"
+                        android:contentDescription="@string/delete"
+                        android:src="@drawable/delete"
+                        tools:ignore="TouchTargetSizeCheck"></ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Введите расходники"
+                        android:inputType="text"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="14sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:contentDescription="@string/inputText"
+
+                        android:inputType="number"
+
+                        android:textAlignment="center"
+
+                        tools:ignore="TouchTargetSizeCheck,EditableContentDescCheck"></EditText>
+
+                    <Spinner
+                        android:id="@+id/spinner_units2"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.5"
+
+
+                        android:background="@drawable/round_border_info_orders"
+
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck"></Spinner>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.5"
+                        android:backgroundTint="@color/Clear"
+                        android:contentDescription="@string/delete"
+                        android:src="@drawable/delete"
+                        tools:ignore="TouchTargetSizeCheck"></ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Введите расходники"
+                        android:inputType="text"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="14sp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <EditText
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.5"
+                        android:contentDescription="@string/inputText"
+
+                        android:inputType="number"
+
+                        android:textAlignment="center"
+
+                        tools:ignore="TouchTargetSizeCheck,EditableContentDescCheck"></EditText>
+
+                    <Spinner
+                        android:id="@+id/spinner_units3"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1.5"
+
+
+                        android:background="@drawable/round_border_info_orders"
+
+                        android:textAlignment="center"
+                        tools:ignore="TouchTargetSizeCheck"></Spinner>
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2.5"
+                        android:backgroundTint="@color/Clear"
+                        android:contentDescription="@string/delete"
+                        android:src="@drawable/delete"
+                        tools:ignore="TouchTargetSizeCheck"></ImageButton>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/Clear"
+                        android:contentDescription="@string/inputDetails"
+                        android:src="@drawable/plus_blue"
+                        tools:ignore="TouchTargetSizeCheck"></ImageButton>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/container_infoOrders_items"
+                android:paddingHorizontal="100dp">
+
+                <Button
+                    android:id="@+id/Button_complete"
+                    android:layout_width="wrap_content"
+                    android:layout_marginVertical="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_green"
+                    android:backgroundTint="@color/green"
+                    android:text="@string/complete"></Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
