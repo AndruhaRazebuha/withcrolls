@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -20,6 +21,7 @@ public class Forgot_password extends AppCompatActivity {
 
     Button btnForgotPass;
     ConstraintLayout rootForgotPass;
+    ProgressDialog dialog;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -30,11 +32,20 @@ public class Forgot_password extends AppCompatActivity {
         btnForgotPass = findViewById(R.id.btnForgotPass);
         rootForgotPass = findViewById(R.id.rootForgotPass);
 
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("Подождите...");
         btnForgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast toast = Toast.makeText(getApplicationContext(), "Все робит!", Toast.LENGTH_SHORT);
-                toast.show();
+                final EditText phone = findViewById(R.id.phoneField);
+                if (TextUtils.isEmpty(phone.getText().toString())) {
+                    Toast.makeText(Forgot_password.this, "Введите телефон!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                dialog.show();
+                Toast.makeText(Forgot_password.this, "Код отправлен!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Forgot_password.this, LoginActivity.class));
+                finish();
             }
         });
         @SuppressLint({"MissingInflatedId", "LocalSuppress"})
@@ -42,7 +53,9 @@ public class Forgot_password extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                dialog.show();
+                startActivity(new Intent(Forgot_password.this, LoginActivity.class));
+                finish();
             }
         });
     }

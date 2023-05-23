@@ -126,20 +126,16 @@ public class InfoOrdersActivity extends AppCompatActivity {
             }
         });
 
-        spinner1.setOnItemSelectedListener(new
-                                                   AdapterView.OnItemSelectedListener() {
-                                                       @Override
-                                                       public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 // Обработка выбора элемента для первого Spinner
-                                                           String selectedItem = (String) parent.getItemAtPosition(position);
+                String selectedItem = (String) parent.getItemAtPosition(position);
 // Дополнительные действия в зависимости от выбранного элемента
-                                                       }
-
-                                                       @Override
-                                                       public void onNothingSelected(AdapterView<?> parent) {
+                }@Override
+            public void onNothingSelected(AdapterView<?> parent) {
 // Обработка случая, когда не выбран ни один элемент для первого Spinner
-                                                       }
-                                                   });
+            }
+        });
 
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
