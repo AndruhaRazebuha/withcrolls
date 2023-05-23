@@ -15,6 +15,7 @@ public class InfoOrdersActivity extends AppCompatActivity {
     private Spinner spinner, spinner1, spinner2;
     private Spinner spinner_units,spinner_units1,spinner_units2,spinner_units3;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
